@@ -11,8 +11,6 @@ bibliography: "template.bib"
 csl: apa7.csl
 ---
 
-<!-- R set-up -->
-
 ```{r setup, include=FALSE, message=FALSE, warning=FALSE}
 # chunk settings
 knitr::opts_chunk$set(warning = FALSE, message = FALSE, echo = FALSE, out.width = '\\textwidth')

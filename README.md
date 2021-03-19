@@ -51,7 +51,7 @@ These files are as follows:
 References appear after the Acknowledgements/funding section.
 Each file includes placeholder text and instructions for particular features, like cross-referencing in `bookdown`.
 
-Within the *sections* folder is the *code* folder, which contains the *scripts* folder.
-The R Markdown documents in the *code* folder draw on the R script in the *scripts* folder for data analysis and formatting.
+Within the *sections* folder is the *code* folder.
+These R Markdown documents draw on the R script included in the *scripts* subfolder for data analysis and formatting.
 I encourage you to open all of these documents to understand where the code references in the sections are coming from.
-The *source_script.R* file includes helper functions I created for APA number formatting.
+The *source_script.R* file also includes helper functions I created for APA number formatting.

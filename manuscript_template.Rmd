@@ -1,0 +1,60 @@
+---
+citeproc: no
+output:
+  bookdown::word_document2:
+    reference_docx: template.docx
+    pandoc_args: [
+      "--lua-filter", "multiple-bibliographies.lua",
+      "--lua-filter", "/Library/Frameworks/R.framework/Versions/Current/Resources/library/rmdfiltr/replace_ampersands.lua"
+      ]
+bibliography: "template.bib"
+csl: apa7.csl
+---
+
+<!-- R set-up -->
+
+```{r setup, include=FALSE, message=FALSE, warning=FALSE}
+# chunk settings
+knitr::opts_chunk$set(warning = FALSE, message = FALSE, echo = FALSE, out.width = '\\textwidth')
+
+# Update the root.dir with the path to this file
+# If your data/scripts are in a different place than your manuscript files,
+# you will need to put the path to those files here instead.
+# Then, you will also need to specify the file path for the images folder,
+# or make that a sub-folder in the sections folder
+knitr::opts_knit$set(root.dir = "~/Mirror/manuscript-template")
+```
+
+```{r child = 'sections/0a_title.Rmd'}
+```
+
+\newpage
+
+```{r child = 'sections/0b_abstract.Rmd'}
+```
+
+\newpage
+
+```{r child = 'sections/1_intro.Rmd'}
+```
+
+```{r child = 'sections/2_methods.Rmd'}
+```
+
+```{r child = 'sections/3_results.Rmd'}
+```
+
+```{r child = 'sections/4_conclusion.Rmd'}
+```
+
+\newpage
+
+```{r child = 'sections/5_acknowledgements.Rmd'}
+```
+
+\newpage
+
+# References {-}
+
+::: {#refs}
+:::

@@ -1,0 +1,24 @@
+---
+pagetitle: "child_doc_2"
+---
+
+```{r mean_sd}
+# Pull mean and SD for weight variable
+test_mean <- mtcars_mod %>% pull(wt) %>% mean() %>% prod(1000) %>% zero_formatting()
+test_sd <- mtcars_mod %>% pull(wt) %>% sd() %>% prod(1000) %>% zero_formatting()
+
+# Format variables
+```
+
+```{r corr}
+# Run correlation between mpg and wt
+mt_corr <- cor.test(~ wt + mpg, method = "pearson", data = mtcars_mod)
+
+# Format statistics
+# Normally when I have a whole table full of ANOVA outputs, I would use mutate
+# to format entire columns
+mt_r <- num_formatting(mt_corr$estimate)
+mt_df <- df_formatting(mt_corr$parameter)
+mt_p <- p_formatting(mt_corr$p.value, format_code = 1)
+mt_apa <- apa_corr(mt_df, mt_r, mt_p)
+```

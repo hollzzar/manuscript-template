@@ -1,0 +1,29 @@
+---
+output: bookdown::word_document2
+---
+
+```{r child = 'code/child_doc_1.Rmd'}
+```
+
+# Methods {#methods}
+
+This template uses the `mtcars` data set included in base R.
+
+## Participants {#methods-pars}
+
+You can reference the number of participants (in this case, the number of different car models in `mtcars`) from the child document: `r total_pars`.
+
+## Materials {#methods-mat}
+
+You can add dynamic section number references; for example, Section \@ref(intro). Just add `{#your-label}` after the section header. Note that labels can **only** have alphanumeric characters, which **do not** include underscores. Use dashes instead!
+
+## Procedure {#methods-proc}
+
+You can also reference a table number, as in Table \@ref(tab:test-tab), using the chunk label. Again, the labels must be alphanumeric, and for tables, there must be a caption in the `kable` function.
+
+```{r test-tab}
+# I specified format = "pipe" here, because Word does not handle kable tables well
+# The "pipe" format uses Pandoc's formatting, so it's okay for simple tables like this
+# If you have fancier tables, I strongly recommend creating them in a separate doc that knits to html, and then copy-pasting them into the finished Word document
+knitr::kable(test_mt, format = "pipe", caption = "Table caption", align = "llll")
+```

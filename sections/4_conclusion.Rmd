@@ -1,0 +1,7 @@
+---
+output: bookdown::word_document2
+---
+
+# Discussion {#discussion}
+
+A thoughtful discussion goes here.

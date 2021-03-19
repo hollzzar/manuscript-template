@@ -1,0 +1,15 @@
+---
+output: bookdown::word_document2
+---
+
+# Abstract {-}
+
+::: {custom-style="Abstract text"}
+Your abstract goes here.
+:::
+
+# Keywords {-}
+
+::: {custom-style="Key text"}
+key1; key2; key3
+:::

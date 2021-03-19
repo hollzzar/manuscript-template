@@ -1,0 +1,9 @@
+---
+output: bookdown::word_document2
+---
+
+# Funding and acknowledgements {-}
+
+::: {custom-style="Acknowledge text"}
+Your statement goes here.
+:::

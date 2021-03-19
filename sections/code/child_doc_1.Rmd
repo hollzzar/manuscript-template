@@ -1,0 +1,28 @@
+---
+pagetitle: "child_doc_1"
+---
+
+```{r source}
+wd <- getwd()
+source(paste(wd, "sections/code/scripts/source_script.R", sep = "/"))
+```
+
+```{r par_no}
+# Pull car model names from row names into new column
+mtcars_mod <- mtcars %>% 
+  tibble::rownames_to_column(var = "models")
+
+# Count number of unique model names
+total_pars <- mtcars_mod %>% pull(models) %>% unique() %>% length()
+```
+
+```{r method_tab}
+# Summarize data for table
+test_mt <- mtcars_mod %>%
+  group_by(cyl) %>%
+  dplyr::summarize(`Miles per gallon` = zero_formatting(mean(mpg)), 
+                   `Horse power` = zero_formatting(mean(hp)), 
+                   Weight = zero_formatting(mean(wt)), 
+                   .groups = "keep") %>%
+  rename(`Number of cylinders` = cyl)
+```

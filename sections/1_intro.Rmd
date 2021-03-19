@@ -1,0 +1,19 @@
+---
+output: word_document
+---
+
+# Introduction {#intro}
+
+Check out my [R Markdown Guide](https://www.hzaharchuk.com/rmarkdown-guide/) for more information on making this platform work for you!
+
+## Section 1
+
+Some more text with a footnote^[Hello!] and a reference [@ref1].
+
+## Section 2
+
+@ref2 is an example of an in-text reference.
+
+## Section 3
+
+Here are a couple of references [@ref2; @ref3].

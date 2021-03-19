@@ -1,0 +1,55 @@
+---
+output: bookdown::word_document2
+---
+
+[comment]: <> (The custom-style tags tell Pandoc which Word styles to use for each section. If you want to define new styles or change the ones included here, go to the template document and use the Styles Pane.)
+
+::: {custom-style="Title"}
+Some title
+:::
+
+::: {custom-style="Author"}
+Author One^1,2^, Author Two^1^, Author Three^2\*^
+:::
+
+::: {custom-style="Title text"}
+^1^Cool School
+
+^2^Sweet Center
+:::
+
+::: {custom-style="Title heading"}
+\*Corresponding author
+:::
+
+::: {custom-style="Title text"}
+Author Three: email
+
+Department
+
+University
+
+Address
+
+Phone
+:::
+
+::: {custom-style="Title heading"}
+Author contact information
+:::
+
+::: {custom-style="Title text"}
+Author One: email
+
+Author Two: email
+
+Author Three: email
+:::
+
+::: {custom-style="Title heading"}
+CRediT author statement
+:::
+
+::: {custom-style="Title text"}
+Author One: Conceptualization, Methodology, Validation, Formal Analysis, Investigation, Resources, Data Curation, Writing – Original Draft, Writing – Review & Editing, Visualization. Author Two: Software. Author Three: Supervision, Project Administration, Funding Acquisition.
+:::

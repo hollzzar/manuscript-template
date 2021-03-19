@@ -1,0 +1,18 @@
+---
+output: bookdown::word_document2
+---
+
+```{r child = 'code/child_doc_2.Rmd'}
+```
+
+# Results {#results}
+
+Here we report the mean values and standard deviations of the weight variable (*M* = `r test_mean` lbs, *SD* = `r test_sd` lbs).
+
+```{r test-graph, fig.cap = "Example of a figure caption."}
+knitr::include_graphics("images/test_graph.png")
+```
+
+Like tables, you can reference figure numbers using the alphanumeric chunk label, as in Figure \@ref(fig:test-graph). Unlike tables, the figure caption goes in the chunk arguments using `fig.cap`, rather than in the `kable` function itself.
+
+Using the helper functions in the `source_script.R` file, I can easily include APA-formatted statistics for the correlation between miles per gallon and weight (`r mt_apa`).

@@ -20,7 +20,7 @@ knitr::opts_chunk$set(warning = FALSE, message = FALSE, echo = FALSE, out.width 
 # you will need to put the path to those files here instead.
 # Then, you will also need to specify the file path for the images folder,
 # or make that a sub-folder in the sections folder
-knitr::opts_knit$set(root.dir = "~/your-path/manuscript-template")
+# knitr::opts_knit$set(root.dir = "~/your-path/manuscript-template")
 ```
 
 ```{r child = 'sections/0a_title.Rmd'}

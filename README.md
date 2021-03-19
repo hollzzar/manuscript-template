@@ -1,13 +1,13 @@
 # Reproducible scientific manuscripts with R Markdown
 
 There are many great resources for creating reproducible scientific manuscripts in R Markdown. 
-These include the extensive documentation for the `html_document2` and `pdf_document2` templates in the `bookdown` package, as well as specialized packages for APA like `papaja`. 
+Two packages in particular stand out: [`bookdown`](https://github.com/rstudio/bookdown) and [`papaja`](https://github.com/crsh/papaja).
+`bookdown` is a flexible tool not only for creating books, but also documents of any kind that include cross-referencing.
+`papaja` is specifically designed for APA formatting, which is used in my field.
 
-I found myself looking for a way to create specialized Word documents that went beyond these existing resources.
-Regarding `bookdown`, its functionality is more extensive for HTML/PDF than for Word output.
-However, many collaborators still rely on a Word-based workflow rather than HTML- or PDF-based workflows that use Git for version control.
-Regarding `papaja`, this package does output to Word, but (a) uses package-specific output functions and (b) controls customization under-the-hood.
-While the point of `papaja` is to take the burden of customization off the user, it's difficult to transition code and text to different documents, outputs, or projects.
+I wanted to combine the strengths of both packages into a flexible template.
+In particular, I wanted to create Microsoft Word documents with the content and formatting I needed without a lot of post-output effort.
+While many journals accept LaTeX submissions, my collaborators rely on a Word-based workflow, and converting existing templates from tex to Word produced less than satisfactory results.
 
 This repository contains a template for creating manuscripts that takes advantage of R Markdown's reproducibility, Word's ease of collaboration, and `bookdown`'s cross-referencing capabilities.
 

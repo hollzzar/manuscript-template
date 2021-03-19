@@ -49,7 +49,8 @@ These files are as follows:
 - Acknowledgements/funding
 
 References appear after the Acknowledgements/funding section.
-Each file includes placeholder text and instructions on how to take advantage of particular features, like cross-referencing in `bookdown`.
+Each file includes placeholder text and instructions for particular features, like cross-referencing in `bookdown`.
+
 Within the *sections* folder is the *code* folder, which contains the *scripts* folder.
 The R Markdown documents in the *code* folder draw on the R script in the *scripts* folder for data analysis and formatting.
 I encourage you to open all of these documents to understand where the code references in the sections are coming from.

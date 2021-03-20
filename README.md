@@ -8,7 +8,7 @@ Two packages in particular stand out: [`bookdown`](https://github.com/rstudio/bo
 `papaja` is specifically designed for APA formatting, which is used in my field.
 
 I wanted to combine the strengths of both packages into a flexible template.
-In particular, I wanted to create Microsoft Word documents with the content and formatting I needed without a lot of post-output effort.
+In particular, I wanted to create Microsoft Word documents using R Markdown that (a) already had the formatting I needed without a lot of post-output effort and (b) were also easily customized depending on the journal/audience.
 While many journals accept LaTeX submissions, my collaborators rely on a Word-based workflow, and converting existing templates from tex to Word produced less than satisfactory results.
 Existing templates for Word output were also not formatted for my needs and were not easily customized.
 
@@ -18,6 +18,8 @@ In order to use this template, you will need to:
 - Install the `bookdown` package
 - [Locate the ampersand replacement lua file](https://cran.rstudio.com/web/packages/rmdfiltr/vignettes/replace_ampersands.html) and update the path I included in the YAML header, or remove the whole pandoc argument if not needed for your citation style
 - Update the root directory path in the set-up chunk in the main R Markdown file (as described in the chunk comments)
+
+If you aren't super familiar with R Markdown, you can check out my [R Markdown Guide for Psychology Graduate Students](https://www.hzaharchuk.com/rmarkdown-guide/).
 
 There are two main limitations to using Word outputs. 
 One is that, to my knowledge, there is no way to include line numbers or update headers automatically.
@@ -30,7 +32,7 @@ This will need to be done by hand.
 ## Template organization
 
 The R Markdown files and R scripts are organized in a very hierarchical fashion.
-This structure keeps the information tidy and concise at each stage, from data wrangling, analysis, and visualization to presentation.
+This structure keeps the information tidy and concise at each stage, from data wrangling, analysis, and visualization to presentation/writing.
 
 The main R Markdown file is *manuscript_template.Rmd*. 
 This file includes the YAML header for the whole document, which references the Microsoft Word reference document for formatting, updated Citation Style Language (csl) file for APA references, pandoc filter for handling references, and placeholder bibliography (bib) file that you can update/substitute for your own.

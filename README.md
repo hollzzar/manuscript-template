@@ -13,9 +13,6 @@ If you aren't super familiar with R Markdown, you can check out my [R Markdown G
 
 ## Template organization
 
-The R Markdown files and R scripts are organized in a very hierarchical fashion.
-This structure keeps the information tidy and concise at each stage, from data wrangling, analysis, and visualization to presentation/writing.
-
 The main R Markdown file is *manuscript_template.Rmd*. 
 This file includes the YAML header for the whole document, which references the Microsoft Word reference document for formatting, updated Citation Style Language (csl) file for APA references, pandoc filter for handling references, and placeholder bibliography (bib) file that you can update/substitute for your own.
 Each section is created in a separate R Markdown file that is included as a `child` document in the main file.

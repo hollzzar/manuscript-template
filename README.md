@@ -27,9 +27,9 @@ These files are as follows:
 - Methods
 - Results
 - Conclusion/discussion
-- Acknowledgements/funding
+- Acknowledgments/funding
 
-References appear after the Acknowledgements/funding section.
+References appear after the Acknowledgments/funding section.
 Each file includes placeholder text and instructions for particular features, like cross-referencing in `bookdown`.
 
 Within the *sections* folder is the *code* folder.
